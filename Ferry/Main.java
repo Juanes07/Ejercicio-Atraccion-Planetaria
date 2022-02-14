@@ -29,21 +29,29 @@ public class Main {
         int opcion;
 
         ferry = new ArrayList();
+        /**
+         *
+         */
+        try {
+            for (int i = 0; i <= 10; i++) {
+                System.out.println("ingrese año de matricula");
+                yearDate = scanner.nextInt();
+                System.out.println("ingrese numero de pasajeros actual");
+                passenger = scanner.nextInt();
+                System.out.println("ingrese numero de llantas");
+                wheels = scanner.nextInt();
+                System.out.println("ingrese numero de asientos Totales");
+                seats = scanner.nextInt();
+                vehi = new Vehicle(passenger, wheels, yearDate, seats);
+                System.out.println("Su vehiculo ha sido añadido al ferry.");
+                ferry.add(vehi);
+                i++;
+            }
 
-        for (int i = 0; i <= 10; i++) {
-            System.out.println("ingrese año de matricula");
-            yearDate = scanner.nextInt();
-            System.out.println("ingrese numero de pasajeros actual");
-            passenger = scanner.nextInt();
-            System.out.println("ingrese numero de llantas");
-            wheels = scanner.nextInt();
-            System.out.println("ingrese numero de asientos Totales");
-            seats = scanner.nextInt();
-            vehi = new Vehicle(passenger, wheels, yearDate, seats);
-            System.out.println("Su vehiculo ha sido añadido al ferry.");
-            ferry.add(vehi);
-            i++;
-        }
-        System.out.println(ferry);
+        } catch (Exception exc) {
+            System.out.println("Ingresa  numeros, no letras por favor");
+        };
     }
 }
+
+

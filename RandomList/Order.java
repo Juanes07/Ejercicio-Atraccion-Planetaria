@@ -20,7 +20,6 @@ public class Order {
      * @param int left se refiere a la ubicacion del recorrido del array
      * @param int numbers es el arreglo al cual deseamos organizar
      * @return el arreglo organizado
-     * @throws Exception
      *
      * @author [Juan Esteban, Velasquez Posada ]
      *

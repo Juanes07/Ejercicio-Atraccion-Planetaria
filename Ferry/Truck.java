@@ -5,8 +5,15 @@
 package Ferry;
 
 /**
+ * [la clase Vehicle es la clase base de la cual heredamos las siguientes
+ * clases]
  *
- * @author JUANES
+ * @version [1.0.000 2022-02-12]
+ *
+ * @author [Juan Esteban, Velasquez Posada ]
+ *
+ * @since [1.0.000 2022-02-12]
+ *
  */
 public class Truck extends Vehicle {
 
@@ -23,7 +30,7 @@ public class Truck extends Vehicle {
     public void setHeight(float height) {
         this.height = height;
     }
-    
+
     /**
      * Numero de pasajeros asignado en clase Truck
      *
@@ -98,11 +105,29 @@ public class Truck extends Vehicle {
         this.numberSeats = numberSeats;
     }
 
+    /**
+     * [Se detalla el metodo para modificar como se presentan los datos de la clase
+     * Car]
+     *
+     *
+     * @param numberOfPassengers Numero de pasajeros Truck
+     * @param numberWheels Numero de llantas del Truck
+     * @param registration Año de matriculacion del Truck
+     * @param numberSeats Numero de asientos totales del Truck
+     * @param height altura del Truck
+     * 
+     * @return Un arreglo con la informacion de la clase Car
+     *
+     * @author [Juan Esteban, Velasquez Posada ]
+     *
+     * @since [1.0.000 2022-02-12]
+     */
+
     @Override
     public String toString() {
-        return "Tu camion tiene:" + "\n" + "numero de pasajeros= " + numberOfPassengers +
-                ", numero de llantas= " + numberWheels
-                + ", año de matricula= " + registration + ", numero de asientos= " 
+        return "Tu camion tiene:" + "\n" + "numero de pasajeros= " + numberOfPassengers
+                + ", numero de llantas= " + numberWheels
+                + ", año de matricula= " + registration + ", numero de asientos= "
                 + numberSeats + " , tiene una altura de : " + height + " metros";
     }
 

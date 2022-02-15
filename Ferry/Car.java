@@ -1,8 +1,14 @@
 package Ferry;
 
 /**
+ * [la clase Car es hereda de clase vehicle]
  *
- * @author JUANES
+ * @version [1.0.000 2022-02-12]
+ *
+ * @author [Juan Esteban, Velasquez Posada ]
+ *
+ * @since [1.0.000 2022-02-12]
+ *
  */
 public class Car extends Vehicle {
 
@@ -103,7 +109,23 @@ public class Car extends Vehicle {
     public void setNumberSeats(int numberSeats) {
         this.numberSeats = numberSeats;
     }
-
+    
+    /**
+     * [Se detalla el metodo para modificar como se presentan los datos de la clase Car]
+     *
+     *
+     * @param numberOfPassengers Numero de pasajeros Car
+     * @param numberWheels Numero de llantas del Car
+     * @param registration Año de matriculacion del Car
+     * @param numberSeats Numero de asientos totales del Car
+     * @param electric Valor booleano. true significa que usa electricidad como combustible
+     * @return Un arreglo con la informacion de la clase Car
+     *
+     * @author [Juan Esteban, Velasquez Posada ]
+     *
+     * @since [1.0.000 2022-02-12]
+     */
+    
     @Override
     public String toString() {
         return "Tu carro tiene:" + "\n" + "numero de pasajeros= " + numberOfPassengers +

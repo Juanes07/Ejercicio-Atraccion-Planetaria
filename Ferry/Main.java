@@ -45,7 +45,10 @@ public class Main {
         switch (opcion) {
             case 1: 
                 try {
+                    
+                        
                 for (int i = 0; i <= 1; i++) {
+                    System.out.println("A continuacion. Ingrese los datos pedidos de los vehiculos");
                     System.out.println("ingrese año de matricula");
                     yearDate = scanner.nextInt();
                     System.out.println("ingrese numero de pasajeros actual");

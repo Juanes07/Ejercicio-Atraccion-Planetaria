@@ -133,7 +133,9 @@ public class Vehicle {
      */
     @Override
     public String toString() {
-        return "Listado de vehiculos dentro del ferry:" + "\n" + "numero de pasajeros= " + numberOfPassengers + ", numero de llantas= " + numberWheels
+        return "Listado de vehiculos dentro del ferry:" + "\n" + "numero de pasajeros= " 
+                + numberOfPassengers + ", numero de llantas= " + numberWheels
                 + ", año de matricula= " + registration + ", numero de asientos= " + numberSeats;
     }
+
 }

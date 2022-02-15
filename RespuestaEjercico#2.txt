@@ -1,0 +1,8 @@
+Respuesta ejercicio 2:
+
+Se pueden tener varios metodos main dentro de un sistema java
+pero no es algo practico ni eficiente. debido a que se deberia ordenar
+al metodo main en especifo para ejecutarlo. Adicional 
+por defecto se asigna un Main como el principal por lo que al correr
+el sistema siempre se activara este. pero en caso de querer correr 
+otro metodo main se deberia hacer manual.

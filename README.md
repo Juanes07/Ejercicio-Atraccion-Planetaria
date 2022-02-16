@@ -13,3 +13,7 @@ Ejercicio usando la clase Math, se encuentran dentro la carpeta RandomList
 
 # Ejercicio #4 y #5
 Los ejercicios Sobre crear un ferry se encuentran dentro la carpeta Ferry
+
+# Ejercicio #6
+Ejercio utilizando la clase Vector con la propiedad de array dinamicos. 
+Se encuentra dentro la carpeta DinamicArray

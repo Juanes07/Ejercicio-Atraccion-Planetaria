@@ -14,10 +14,19 @@ package Ferry;
 public class Bike extends Vehicle {
 
     String typeBike;
-
-    public Bike(int numberOfPassengers, int numberWheels, int registration, int numberSeats, String typeBike) {
+   /**
+     * Constructor de la clase Bike
+     *
+     * @param numberOfPassengers valor int. numero de los pasajeros totales
+     * @param numberWheels valor int. numero de llantas del vehiculo
+     * @param registration valor int. a;o de matriculacion del vehiculo
+     * @param numberSeats valor int. numero de asientos totales del vehiculo
+     */
+    public Bike( int numberOfPassengers, int numberWheels, int registration, int numberSeats, String typeBike) {
         super(numberOfPassengers, numberWheels, registration, numberSeats);
     }
+
+  
     
     /**
      * El tipo de bibicleta
@@ -60,7 +69,7 @@ public class Bike extends Vehicle {
     /**
      * Numero de llantas asignado clase bike
      *
-     * @return getNumberWheels valor int
+     * @return numberWheels valor int
      */
     public int getNumberWheels() {
         return numberWheels;
@@ -85,10 +94,10 @@ public class Bike extends Vehicle {
     }
 
     /**
-     * Año de matriculacion del vehiculo asignada por usuario (en caso de ser
+     * Año de matriculacion de la bicicleta asignada por usuario (en caso de ser
      * solicitado)
      *
-     * @param numberOfPassengers valor int
+     * @param registration valor int
      */
     public void setRegistration(int registration) {
         this.registration = registration;
@@ -104,28 +113,20 @@ public class Bike extends Vehicle {
     }
 
     /**
-     * Numero de pasajeros totales asignado por usuario (en caso de ser
+     * Numero de asientos totales asignado por usuario (en caso de ser
      * solicitado)
      *
-     * @param numberOfPassengers valor int
+     * @param numberSeats valor int
      */
     public void setNumberSeats(int numberSeats) {
         this.numberSeats = numberSeats;
     }
 
-    public void setVehicle(int numberOfPassengers, int numberWheels, int registration, int numberSeats) {
-        this.numberOfPassengers = numberOfPassengers;
-        this.numberWheels = numberWheels;
-        this.registration = registration;
-        this.numberSeats = numberSeats;
-    }
 
     /**
      * [Detalle Sera el metodo para ingresar el arreglo a organizar ]
      *
-     *
-     *
-     * @param registration Año de matriculacion del vehiculo
+     * @param registration Año de matriculacion de la bicleta
      * @param typeBike tipo de bicicleta seteado por usuario
      * @return Una estructura de arreglo para mostrar los datos de la bicicleta
      *
@@ -135,7 +136,7 @@ public class Bike extends Vehicle {
      */
     @Override
     public String toString() {
-        return "La bicicleta que creaste tiene: " + "\n" + ", año de matricula= "
+        return "La bicicleta que creaste tiene: " + "\n" + " año de matricula= "
                 + registration + " Y es de tipo: " + typeBike;
     }
 }

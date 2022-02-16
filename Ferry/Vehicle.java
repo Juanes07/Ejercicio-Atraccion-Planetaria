@@ -85,7 +85,7 @@ public class Vehicle {
      * Año de matriculacion del vehiculo asignada por usuario (en caso de ser
      * solicitado)
      *
-     * @param numberOfPassengers valor int
+     * @param registration valor int
      */
     public void setRegistration(int registration) {
         this.registration = registration;
@@ -101,21 +101,16 @@ public class Vehicle {
     }
 
     /**
-     * Numero de pasajeros totales asignado por usuario (en caso de ser
+     * Numero de asientos totales asignado por usuario (en caso de ser
      * solicitado)
      *
-     * @param numberOfPassengers valor int
+     * @param numberSeats valor int
      */
     public void setNumberSeats(int numberSeats) {
         this.numberSeats = numberSeats;
     }
 
-    public void setVehicle(int numberOfPassengers, int numberWheels, int registration, int numberSeats) {
-        this.numberOfPassengers = numberOfPassengers;
-        this.numberWheels = numberWheels;
-        this.registration = registration;
-        this.numberSeats = numberSeats;
-    }
+    
 
     /**
      * [Detalle Sera el metodo para ingresar el arreglo a organizar ]

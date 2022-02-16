@@ -8,30 +8,28 @@ package Ferry;
  *
  * @author [Juan Esteban, Velasquez Posada ]
  *
- * @since [1.0.000 2022-02-12]
+ * @since [1.0.000 2022-02-15]
  *
  */
-public class Truck extends Vehicle {
+public class Motorcicle extends Vehicle {
+        int typeMotor;
 
-    float height;
-
-    public Truck( int numberOfPassengers, int numberWheels, int registration, int numberSeats, float height) {
+    public Motorcicle(int typeMotor, int numberOfPassengers, int numberWheels, int registration, int numberSeats) {
         super(numberOfPassengers, numberWheels, registration, numberSeats);
-        this.height = height;
+        this.typeMotor = typeMotor;
+    }
+    
+    public int getTypeMotor() {
+        return typeMotor;
     }
 
-   
-
-    public float getHeight() {
-        return height;
+    public void setTypeMotor(int typeMotor) {
+        this.typeMotor = typeMotor;
     }
+ 
 
-    public void setHeight(float height) {
-        this.height = height;
-    }
-
-    /**
-     * Numero de pasajeros asignado en clase Truck
+     /**
+     * Numero de pasajeros asignado en  clase Motorcicle
      *
      * @return numberOfPassengers valor int
      */
@@ -49,7 +47,7 @@ public class Truck extends Vehicle {
     }
 
     /**
-     * Numero de llantas asignado en clase Truck
+     * Numero de llantas asignado clase Motorcicle
      *
      * @return getNumberWheels valor int
      */
@@ -67,7 +65,7 @@ public class Truck extends Vehicle {
     }
 
     /**
-     * Año de matriculacion del vehiculo en clase Truck
+     * Año de matriculacion de clase Motorcicle
      *
      * @return registration valor int
      */
@@ -79,14 +77,14 @@ public class Truck extends Vehicle {
      * Año de matriculacion del vehiculo asignada por usuario (en caso de ser
      * solicitado)
      *
-     * @param numberOfPassengers valor int
+     * @param registration valor int
      */
     public void setRegistration(int registration) {
         this.registration = registration;
     }
 
     /**
-     * Numero de asientos totales en clase Truck
+     * Numero de asientos totales
      *
      * @return numberSeats valor int
      */
@@ -95,39 +93,33 @@ public class Truck extends Vehicle {
     }
 
     /**
-     * Numero de pasajeros totales asignado por usuario (en caso de ser
+     * Numero de asientos totales asignado por usuario (en caso de ser
      * solicitado)
      *
-     * @param numberOfPassengers valor int
+     * @param numberSeats valor int
      */
     public void setNumberSeats(int numberSeats) {
         this.numberSeats = numberSeats;
     }
-
+    
+    
     /**
-     * [Se detalla el metodo para modificar como se presentan los datos de la clase
-     * Car]
+     * [Detalle Sera el metodo para ingresar el arreglo a organizar ]
      *
      *
-     * @param numberOfPassengers Numero de pasajeros Truck
-     * @param numberWheels Numero de llantas del Truck
-     * @param registration Año de matriculacion del Truck
-     * @param numberSeats Numero de asientos totales del Truck
-     * @param height altura del Truck
-     * 
-     * @return Un arreglo con la informacion de la clase Truck
+     *
+     * @param registration Año de matriculacion del vehiculo
+     * @param typeMotor tipo de cilindraje seteado por usuario
+     * @return Una estructura de arreglo para mostrar los datos de la motocicleta
      *
      * @author [Juan Esteban, Velasquez Posada ]
      *
-     * @since [1.0.000 2022-02-12]
+     * @since [1.0.000 2022-02-15]
      */
-
+    
     @Override
     public String toString() {
-        return "Tu camion tiene:" + "\n" + "numero de pasajeros= " + numberOfPassengers
-                + ", numero de llantas= " + numberWheels
-                + ", año de matricula= " + registration + ", numero de asientos= "
-                + numberSeats + " , tiene una altura de : " + height + " metros";
+        return "La motocicleta que creaste tiene: " + "\n" + " año de matricula= "
+                + registration + " Tiene  cilindraje de: " + typeMotor + "cc" ;
     }
-
 }

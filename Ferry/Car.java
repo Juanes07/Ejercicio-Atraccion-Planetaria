@@ -16,7 +16,9 @@ public class Car extends Vehicle {
 
     public Car(int numberOfPassengers, int numberWheels, int registration, int numberSeats, boolean electric) {
         super(numberOfPassengers, numberWheels, registration, numberSeats);
+        this.electric = electric;
     }
+   
 
     /**
      * En caso de ser true, refleja ser un auto electrico
@@ -98,16 +100,6 @@ public class Car extends Vehicle {
      */
     public int getNumberSeats() {
         return numberSeats;
-    }
-
-    /**
-     * Numero de pasajeros totales asignado por usuario (en caso de ser
-     * solicitado)
-     *
-     * @param numberOfPassengers valor int
-     */
-    public void setNumberSeats(int numberSeats) {
-        this.numberSeats = numberSeats;
     }
     
     /**

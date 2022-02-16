@@ -25,6 +25,8 @@ public class Main {
         Car car;
         Truck truck;
         Bike bike;
+        Motorcicle motorcicle;
+        Motorboat motorboat;
 
         ArrayList<Vehicle> ferry;
         /**
@@ -35,6 +37,7 @@ public class Main {
         int yearDate;
         int seats;
         int opcion;
+        int typeMotor;
         String typeBike;
         boolean oil;
         float height;
@@ -96,7 +99,7 @@ public class Main {
             break;
             case 3:
                 try {
-                System.out.println("ingrese año de matricula");
+                System.out.println("ingrese año de matricula de su carro");
                 yearDate = scanner.nextInt();
                 System.out.println("ingrese numero de pasajeros actual");
                 passenger = scanner.nextInt();
@@ -115,7 +118,6 @@ public class Main {
                 car.setElectric(oil);
                 if (oil = true) {
                     System.out.println(car + " utiliza electricidad,ayudas al ambiente");
-                    System.out.println(car);
                 } else {
                     System.out.println(car + " utiliza gasolina, la cual contamina con CO2");
                 }
@@ -126,11 +128,11 @@ public class Main {
             break;
             case 4:
                 try {
-                System.out.println("ingrese año de matricula");
+                System.out.println("ingrese año de matricula de su bicleta");
                 yearDate = scanner.nextInt();
-                passenger = 2;
+                passenger = 1;
                 wheels = 2;
-                seats = 2;
+                seats = 1;
                 System.out.println("Escriba el tipo de bibicleta que desea: " + "\n"
                         + "Ruta, montañ o BMX. " + " Puedes escribir la respuesta");
                 typeBike = scanner.next();
@@ -142,11 +144,59 @@ public class Main {
             } catch (Exception exc) {
                 System.out.println("Ingresa los datos pedidos. Intentalo de nuevo");
             }
-                break;
+            break;
             case 5:
+                try {
+                System.out.println("ingrese año de matricula de su motocicleta");
+                yearDate = scanner.nextInt();
+                passenger = 1;
+                wheels = 2;
+                seats = 2;
+                System.out.println("ingrese el cilindraje de su motocicleta. los cuales pueden ser: " + "\n"
+                        + "desde 0 hasta 500");
+                typeMotor = scanner.nextInt();
+                motorcicle = new Motorcicle(typeMotor, passenger, wheels, yearDate, seats);
+                motorcicle.setNumberOfPassengers(passenger);
+                motorcicle.setNumberSeats(seats);
+                motorcicle.setNumberWheels(wheels);
+                motorcicle.setRegistration(yearDate);
+                motorcicle.setTypeMotor(typeMotor);
+                if (typeMotor <= 200) {
+                    System.out.println(motorcicle + " lo cual significa que tiene un motor de bajo cilindraje");
+                } else if (typeMotor >= 201 || typeMotor <= 400) {
+                    System.out.println(motorcicle + " lo cual significa que tiene un motor de medio cilindraje");
+                } else if (typeMotor >= 401) {
+                    System.out.println(motorcicle + " lo cual significa que tiene un motor de alto cilindraje");
+                }
+            } catch (Exception exc) {
+                System.out.println("Intentalo de nuevo, pero asegurate de ingresar los datos pedidos");
+            }
+            break;
+            case 6:
+                try {
+                System.out.println("ingrese año de matricula de su lancha a motor");
+                yearDate = scanner.nextInt();
+                System.out.println("ingrese numero de pasajeros actual");
+                passenger = scanner.nextInt();
+                System.out.println("ingrese numero de asientos Totales");
+                seats = scanner.nextInt();
+                System.out.println("ingrese la longitud de su lancha");
+                height = scanner.nextFloat();
+                wheels = 0;
+                motorboat = new Motorboat(height,passenger,wheels,yearDate,seats);
+                motorboat.setLength(height);
+                motorboat.setNumberSeats(seats);
+                motorboat.setNumberOfPassengers(passenger);
+                motorboat.setRegistration(yearDate);
+                motorboat.setNumberWheels(wheels);
+                System.out.println(motorboat);      
+            } catch (Exception exc) {
+                System.out.println("Intentalo de nuevo, pero asegurate de ingresar los datos pedidos");
+            }
+            break;
 
             default:
-                System.out.println("Gracias por participar");
+                System.out.println("No elegiste ninguna opcion correspondiente");
 
         }
 

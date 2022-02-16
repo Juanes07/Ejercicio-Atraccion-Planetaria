@@ -24,6 +24,7 @@ public class Main {
         Vehicle vehi;
         Car car;
         Truck truck;
+        Bike bike;
 
         ArrayList<Vehicle> ferry;
         /**
@@ -34,19 +35,22 @@ public class Main {
         int yearDate;
         int seats;
         int opcion;
+        String typeBike;
         boolean oil;
         float height;
 
         ferry = new ArrayList();
 
         System.out.println("1).Deseas crear una lista de vehiculos." + "\n" + "2)Diseñar propiedades de un camion"
-                + "\n" + "3)Diseñar propiedades de un carro");
+                + "\n" + "3)Diseñar propiedades de un carro"
+                + "\n" + "4)Diseñar una bicicleta"
+                + "\n" + "5)Diseñar una motocicleta"
+                + "\n" + "6)Diseñar una lancha");
         opcion = scanner.nextInt();
         switch (opcion) {
             case 1: 
                 try {
-                    
-                        
+
                 for (int i = 0; i <= 1; i++) {
                     System.out.println("A continuacion. Ingrese los datos pedidos de los vehiculos");
                     System.out.println("ingrese año de matricula");
@@ -111,7 +115,7 @@ public class Main {
                 car.setElectric(oil);
                 if (oil = true) {
                     System.out.println(car + " utiliza electricidad,ayudas al ambiente");
-
+                    System.out.println(car);
                 } else {
                     System.out.println(car + " utiliza gasolina, la cual contamina con CO2");
                 }
@@ -120,8 +124,29 @@ public class Main {
                 System.out.println("Ingresa los datos pedidos. Intentalo de nuevo");
             }
             break;
-            default:
+            case 4:
+                try {
+                System.out.println("ingrese año de matricula");
+                yearDate = scanner.nextInt();
+                passenger = 2;
+                wheels = 2;
+                seats = 2;
+                System.out.println("Escriba el tipo de bibicleta que desea: " + "\n"
+                        + "Ruta, montañ o BMX. " + " Puedes escribir la respuesta");
+                typeBike = scanner.next();
+                bike = new Bike(passenger, wheels, yearDate, seats, typeBike);
+                bike.setRegistration(yearDate);
+                bike.setTypeBike(typeBike);
+                System.out.println(bike);
+
+            } catch (Exception exc) {
                 System.out.println("Ingresa los datos pedidos. Intentalo de nuevo");
+            }
+                break;
+            case 5:
+
+            default:
+                System.out.println("Gracias por participar");
 
         }
 

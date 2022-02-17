@@ -13,7 +13,14 @@ package Ferry;
 public class Car extends Vehicle {
 
     boolean electric = true;
-
+    /**
+     * Constructor de la clase Car
+     *
+     * @param numberOfPassengers valor int. numero de los pasajeros totales
+     * @param numberWheels valor int. numero de llantas del auto
+     * @param registration valor int. a;o de matriculacion del auto
+     * @param numberSeats valor int. numero de asientos totales del auto
+     */
     public Car(int numberOfPassengers, int numberWheels, int registration, int numberSeats, boolean electric) {
         super(numberOfPassengers, numberWheels, registration, numberSeats);
         this.electric = electric;

@@ -1,8 +1,7 @@
 package Ferry;
 
 /**
- * [la clase Vehicle es la clase base de la cual heredamos las siguientes
- * clases]
+ * [la clase Truck es hereda de clase vehicle]
  *
  * @version [1.0.000 2022-02-12]
  *
@@ -14,18 +13,31 @@ package Ferry;
 public class Truck extends Vehicle {
 
     float height;
-
+    /**
+     * @param height valor float. altura del camion
+     *@param numberOfPassengers valor int. numero de los pasajeros totales
+     * @param numberWheels valor int. numero de llantas de Truck
+     * @param registration valor int. a;o de matriculacion de Truck
+     * @param numberSeats valor int. numero de asientos totales de Truck
+     */
     public Truck( int numberOfPassengers, int numberWheels, int registration, int numberSeats, float height) {
         super(numberOfPassengers, numberWheels, registration, numberSeats);
         this.height = height;
     }
 
    
-
+    /**
+     * altura del camion asignado en  clase Truck
+     *
+     * @return height valor float
+     */
     public float getHeight() {
         return height;
     }
-
+    /**
+     * altura de camion asignado por usuario(en caso de sersolicitado);
+     * @param height valor float
+     */
     public void setHeight(float height) {
         this.height = height;
     }

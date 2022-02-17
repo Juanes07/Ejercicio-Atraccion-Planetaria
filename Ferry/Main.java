@@ -41,14 +41,17 @@ public class Main {
         String typeBike;
         boolean oil;
         float height;
-
+        /**
+         * Se crea un arrayList para guardar los datos ingresados de los vehiculos
+         */
         ferry = new ArrayList();
 
         System.out.println("1).Deseas crear una lista de vehiculos." + "\n" + "2)Diseñar propiedades de un camion"
                 + "\n" + "3)Diseñar propiedades de un carro"
                 + "\n" + "4)Diseñar una bicicleta"
                 + "\n" + "5)Diseñar una motocicleta"
-                + "\n" + "6)Diseñar una lancha");
+                + "\n" + "6)Diseñar una lancha" 
+                +"\n" + "Ingresa el numero de la opcion deseada");
         opcion = scanner.nextInt();
         switch (opcion) {
             case 1: 

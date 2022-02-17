@@ -1,8 +1,7 @@
 package Ferry;
 
 /**
- * [la clase Vehicle es la clase base de la cual heredamos las siguientes
- * clases]
+ * [la clase Bike es hereda de clase vehicle]
  *
  * @version [1.0.000 2022-02-12]
  *
@@ -16,11 +15,11 @@ public class Bike extends Vehicle {
     String typeBike;
    /**
      * Constructor de la clase Bike
-     *
+     * @param  typeBike valor string. tipo de bicicleta 
      * @param numberOfPassengers valor int. numero de los pasajeros totales
-     * @param numberWheels valor int. numero de llantas del vehiculo
-     * @param registration valor int. a;o de matriculacion del vehiculo
-     * @param numberSeats valor int. numero de asientos totales del vehiculo
+     * @param numberWheels valor int. numero de llantas de Bike
+     * @param registration valor int. a;o de matriculacion de Bike
+     * @param numberSeats valor int. numero de asientos totales de Bike
      */
     public Bike( int numberOfPassengers, int numberWheels, int registration, int numberSeats, String typeBike) {
         super(numberOfPassengers, numberWheels, registration, numberSeats);
